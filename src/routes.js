@@ -1,21 +1,30 @@
-import 
+import React from "react";
+import Home from "./pages/Actors"
+import ErrorPage from "./pages/ErrorPage";
+import Actors from "./pages/Actors";
+import Directors from "./pages/Actors";
+import Movie from "./pages/Movie"
 
 const routes = [
   {
     path: "/",
-    element: <Home />
+    element: <Home />,
+    errorElement: <ErrorPage />
   },
   {
     path: "/actors",
-    element: <Actors />
+    element: <Actors />,
+    errorElement: <ErrorPage />
   },
   {
     path: "/directors",
-    element: <Directors />
+    element: <Directors />,
+    errorElement: <ErrorPage />
   },
   {
-    path: "/movies",
-    element: <Movies />
+    path: "/movies/:id",
+    element: <Movie />,
+    errorElement: <ErrorPage />
   }
   ];
 
